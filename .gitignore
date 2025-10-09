@@ -1,0 +1,22 @@
+*.pyc
+*.log
+node_modules
+coverage/
+arches_her_workflows/logs
+arches_her_workflows/export_deliverables
+arches_her_workflows/cantaloupe/*
+arches_her_workflows/staticfiles
+arches_her_workflows/media/packages
+arches_her_workflows/media/build/
+arches_her_workflows/uploadedfiles/*
+arches_her_workflows/settings_local.py
+webpack-stats.json
+.vscode/
+*.egg-info
+.DS_STORE
+CACHE
+frontend_configuration
+
+# Packaging
+build/
+dist/
