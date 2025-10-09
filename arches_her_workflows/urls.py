@@ -1,10 +1,31 @@
 from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
-from django.urls import include, path
+from django.urls import include, path, re_path
+
+from arches.app.views.plugin import PluginView
 
 urlpatterns = [
-    # project-level urls
+    re_path(
+        r"^plugins/application-area", PluginView.as_view(), name="application-area"
+    ),
+    re_path(
+        r"^plugins/consultation-workflow",
+        PluginView.as_view(),
+        name="consultation-workflow",
+    ),
+    re_path(r"^plugins/site-visit", PluginView.as_view(), name="site-visit"),
+    re_path(
+        r"^plugins/correspondence-workflow",
+        PluginView.as_view(),
+        name="correspondence-workflow",
+    ),
+    re_path(
+        r"^plugins/communication-workflow",
+        PluginView.as_view(),
+        name="communication-workflow",
+    ),
+    re_path(r"^plugins/init-workflow", PluginView.as_view(), name="init-workflow"),
 ]
 
 handler400 = "arches.app.views.main.custom_400"
