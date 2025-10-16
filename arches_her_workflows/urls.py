@@ -4,6 +4,7 @@ from django.conf.urls.i18n import i18n_patterns
 from django.urls import include, path, re_path
 
 from arches.app.views.plugin import PluginView
+from arches_her_workflows.views.file_template import FileTemplateView
 
 urlpatterns = [
     re_path(
@@ -26,6 +27,7 @@ urlpatterns = [
         name="communication-workflow",
     ),
     re_path(r"^plugins/init-workflow", PluginView.as_view(), name="init-workflow"),
+    re_path(r"^filetemplate", FileTemplateView.as_view(), name="filetemplate"),
 ]
 
 handler400 = "arches.app.views.main.custom_400"

@@ -36,7 +36,6 @@ FILE_TYPES = [
     "gif",
     "jpg",
     "jpeg",
-    "json",
     "pdf",
     "png",
     "psd",
@@ -46,6 +45,8 @@ FILE_TYPES = [
     "xlsx",
     "csv",
     "zip",
+    "json",
+    "docx",
 ]
 FILENAME_GENERATOR = "arches.app.utils.storage_filename_generator.generate_filename"
 UPLOADED_FILES_DIR = "uploadedfiles"
